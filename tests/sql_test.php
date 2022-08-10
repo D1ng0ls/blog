@@ -10,7 +10,7 @@
               'senha' => $senha];
     
     $entidade = 'usuario';
-    $criterio = [['id', 'nome', 'email']];
+    $criterio = [['id', '=', $id]];
     $campos = ['id', 'nome', 'email'];
     print_r($dados);
     echo '<br>';

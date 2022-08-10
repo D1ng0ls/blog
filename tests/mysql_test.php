@@ -10,12 +10,12 @@
     buscar_teste();
 
     function insert_teste($nome, $email, $senha) : void {
-        $dados = [ 'nome' => $nome, 'email' => $email, 'senha' => $senha];
+        $dados = ['nome' => $nome, 'email' => $email, 'senha' => $senha];
         insere('usuario', $dados);
     }
 
     function buscar_teste() : void {
-        $usuarios = buscar('usuarios', ['id', 'nome', 'email'], [], '');
+        $usuarios = buscar('usuario', ['id', 'nome', 'email'], [], '');
         print_r($usuarios);
     }
 
