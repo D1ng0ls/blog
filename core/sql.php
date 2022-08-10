@@ -32,7 +32,7 @@
     }
 
     function delete(string $entidade, array $criterio = []) {
-        $instrucao = "DELETE {$entidade}";
+        $instrucao = "DELETE FROM {$entidade}";
 
         if(!empty($criterio)) {
             $instrucao .= ' WHERE ';
