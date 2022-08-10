@@ -20,6 +20,14 @@
     update_teste3(1, 10, 'vo come bosta');
     buscar_teste3();
 
+    //deletar dados
+    /*delete_teste(1);
+    buscar_teste();
+    delete_teste2(1);
+    buscar_teste2();*/
+    delete_teste3(1);
+    buscar_teste3();
+
     //insert
     function insert_teste($nome, $email, $senha) : void {
         $dados = ['nome' => $nome, 'email' => $email, 'senha' => $senha];
@@ -38,15 +46,17 @@
     function buscar_teste() : void {
         $usuarios = buscar('usuario', ['id', 'nome', 'email', 'senha'], [], '');
         print_r($usuarios);
+        echo "<br><br>";
     }
     function buscar_teste2() : void {
         $usuarios = buscar('post', ['id', 'titulo', 'texto', 'data_postagem'], [], '');
         print_r($usuarios);
+        echo "<br><br>";
     }
     function buscar_teste3() : void {
         $usuarios = buscar('avaliacao', ['id', 'nota', 'comentario'], [], '');
         print_r($usuarios);
-        echo "<br><hr>";
+        echo "<br><hr><hr>";
     }
 
     //updates
@@ -64,5 +74,19 @@
         $dados = ['nota' => $nota, 'comentario' => $comentario];
         $criterio = [['id', '=', $id]];
         atualiza('avaliacao', $dados, $criterio);
+    }
+
+    //deletar
+    /*function delete_teste($id) {
+        $criterio = [['id', '=', $id]];
+        deleta('usuario', $criterio);
+    }
+    function delete_teste2($id) {
+        $criterio = [['id', '=', $id]];
+        deleta('post', $criterio);
+    }*/
+    function delete_teste3($id) {
+        $criterio = [['id', '=', $id]];
+        deleta('avaliacao', $criterio);
     }
 ?>

@@ -35,5 +35,3 @@ create table avaliacao (
     constraint fk_avaliacao_usuario foreign key (usuario_id) references usuario (id),
     constraint fk_avaliacao_post foreign key (post_id) references post (id)
 );
-
-select * from avaliacao;
