@@ -2,7 +2,7 @@
     function conecta() : mysqli {
         $servidor = 'localhost';
         $banco = 'blog';
-        $port = 3307;
+        $port = 3306;
         $usuario = 'root';
         $senha = '';
         $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
