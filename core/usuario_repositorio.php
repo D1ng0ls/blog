@@ -5,7 +5,7 @@
     require_once 'sql.php';
     require_once 'mysql.php';
     $salt = '$exemplosaltifsp';
-
+    
     foreach ($_POST as $indice => $dado) {
         $$indice = limparDados($dado);
     }
@@ -17,7 +17,7 @@
     switch($acao) {
         case 'insert':
             $dados = ['nome' => $nome,'email' => $email,'senha' => crypt($senha, $salt)];
-
+            print_r($dados);
             insere ('usuario',$dados);
 
             break;

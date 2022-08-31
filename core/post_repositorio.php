@@ -5,7 +5,7 @@
     require_once 'conexao_mysql.php';
     require_once 'sql.php';
     require_once 'mysql.php';
-
+    
     foreach($_POST as $indice => $dado) {
         $$indice = limparDados($dado);
     }
