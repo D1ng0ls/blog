@@ -35,11 +35,56 @@
                     if(!empty($id)) {
                         $id = (int)$id;
 
-                        $criterio = [['id', '=']]
+                        $criterio = [['id', '=', $id]];
+
+                        $retorno = buscar('post', ['*'], $criterio);
+
+                        $entidade = $retorno[0];
                     }
                 ?>
+                <h2>Post</h2>
+                <form action="core/post_repositorio.php" method="post">
+                    <input type="hidden" name="acao" value="<?php echo empty($id) ? 'insert' : 'update' ?>">
+                    <input type="hidden" name="id" value="<?php echo $entidade['id'] ?? '' ?>">
+                    <div class="form-group">
+                        <label for="titulo">Título</label>
+                        <input type="text" name="titulo" id="titulo" require="required" class="form-control" value="<?php echo $entidade['titulo'] ?? ''?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Texto</label>
+                        <textarea name="texto" id="texto" require="required" class="form-control">
+                            <?php echo $entidade['texto'] ?? ''?>
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="texto">Postar em</label>
+                        <?php
+                            $data = (!empty($entidade['data_postagem'])) ? explode(' ', $entidade['data_postagem'])[0] : '';
+                            $hora = (!empty($entidade['data_postagem'])) ? explode(' ', $entidade['data_postagem'])[1] : '';
+                        ?>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <input name="data_postagem" type="date" id="data_postagem" class="form-control" value="<?php echo $data ?>">
+                            </div>
+                            <div class="col-md-3">
+                                <input name="hora_postagem" type="time" id="hora_postagem" class="form-control" value="<?php echo $hora ?>">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-success">
+                            Salvar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <?php include 'includes/rodape.php' ?>
             </div>
         </div>
     </div>
+    <script src="lib/js/bootstrap.min.js"></script>
 </body>
 </html>
