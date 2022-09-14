@@ -36,4 +36,6 @@ create table avaliacao (
     constraint fk_avaliacao_post foreign key (post_id) references post (id)
 );
 
-select * from usuario;
+select * from usuario, post;
+
+insert into post (titulo, texto, usuario_id) values ('Título foda', 'quero morrer', 1);
