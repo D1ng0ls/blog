@@ -38,4 +38,4 @@ create table avaliacao (
 
 select * from usuario;
 
-update usuario set ativo=1 where id=3;
+update usuario set ativo=1 where id=1;
