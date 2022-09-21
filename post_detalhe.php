@@ -56,7 +56,7 @@
         </div>
         <div class="row">
             <div class="card-body">
-                <a href="index.php"><button class="btn btn-outline-success my-2 my-sm-0">Voltar ←</button></a>
+                <a href="index.php"><button class="btn btn-success my-2 my-sm-0">Voltar ←</button></a>
             </div>
         </div>
         <div class="row">
