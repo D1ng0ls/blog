@@ -32,7 +32,7 @@
                     require_once 'core/mysql.php';
 
                     foreach($_GET as $indice => $dado) {
-                        $indice = limparDados($dado);
+                        $$indice = limparDados($dado);
                     }
 
                     $data_atual = date('Y-m-d H:i:s');
@@ -42,9 +42,9 @@
                     if(!empty($busca)){
                         $criterio[] = [
                             'AND',
-                            'texto',
+                            'titulo',
                             'like',
-                            "%{$busca}%"
+                            "%{$busca}%",
                         ];
                     }
 
