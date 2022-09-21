@@ -52,9 +52,9 @@
                     </div>
                     <div class="form-group">
                         <label for="texto">Texto</label>
-                        <textarea name="texto" id="texto" require="required" class="form-control">
-                            <?php echo $entidade['texto'] ?? ''?>
-                        </textarea>
+<textarea name="texto" id="texto" require="required" class="form-control">
+<?php echo $entidade['texto'] ?? ''?>
+</textarea>
                     </div>
                     <div class="form-group">
                         <label for="texto">Postar em</label>
