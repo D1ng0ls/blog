@@ -37,12 +37,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <?php 'includes/topo.php' ?>
+                <?php include 'includes/topo.php' ?>
             </div>
         </div>
         <div class="row" style="min-height: 500px;">
             <div class="col-md-12">
-                <?php 'includes/menu.php' ?>
+                <?php include 'includes/menu.php' ?>
             </div>
             <div class="col-md-10" style="padding-top: 50px;">
                 <div class="card-body">
@@ -52,6 +52,11 @@
                     <?php echo html_entity_decode($post['texto']) ?>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-body">
+                <a href="index.php"><button class="btn btn-outline-success my-2 my-sm-0">Voltar ←</button></a>
             </div>
         </div>
         <div class="row">
