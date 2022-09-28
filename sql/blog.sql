@@ -36,6 +36,6 @@ create table avaliacao (
     constraint fk_avaliacao_post foreign key (post_id) references post (id)
 );
 
-select * from usuario;
+select * from blog.usuario;
 
-update usuario set ativo=1 where id=1;
+update blog.usuario set adm=1 where id=2;
